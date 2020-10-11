@@ -44,7 +44,27 @@ public class DataAccess  {
 	private static int id_q=200;
 	private static int id_a=200;
 	protected static ConfigXML c;
+	public void open(boolean initializeMode) {
+		c=ConfigXML.getInstance();
+		
+		System.out.println("Creating DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
+		String fileName=c.getDbFilename();
+		if (initializeMode)
+			fileName=fileName+";drop";
+		System.out.println("FN: "+fileName);
+		if (c.isDatabaseLocal()) {
+			  emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
+			  db = emf.createEntityManager();
+		} else {
+			Map<String, String> properties = new HashMap<String, String>();
+			  properties.put("javax.persistence.jdbc.user", c.getUser());
+			  properties.put("javax.<pluginManagement>persistence.jdbc.password", c.getPassword());
 
+			  emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
+
+			  db = emf.createEntityManager();
+    	   }
+	}
 	public DataAccess(boolean initializeMode)  {
 		
 		c=ConfigXML.getInstance();
@@ -60,7 +80,7 @@ public class DataAccess  {
 		} else {
 			Map<String, String> properties = new HashMap<String, String>();
 			  properties.put("javax.persistence.jdbc.user", c.getUser());
-			  properties.put("javax.persistence.jdbc.password", c.getPassword());
+			  properties.put("javax.<pluginManagement>persistence.jdbc.password", c.getPassword());
 
 			  emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
 

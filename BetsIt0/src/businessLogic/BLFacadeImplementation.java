@@ -27,7 +27,9 @@ import exceptions.QuestionAlreadyExist;
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
-
+	
+	private DataAccess dbManager;
+	
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
 		ConfigXML c=ConfigXML.getInstance();
@@ -40,7 +42,16 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 	}
 	
-
+	public BLFacadeImplementation(DataAccess da) {
+		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
+		ConfigXML c=ConfigXML.getInstance();
+		if (c.getDataBaseOpenMode().equals("initialize")) {
+			da.open(true);
+			da.initializeDB();
+			da.close();
+		}
+		dbManager=da;
+	}
 	/**
 	 * This method creates a question for an event, with a question text and the minimum bet
 	 * 
@@ -53,16 +64,16 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */
 	@WebMethod
 	public User addDinero(String id,float dinero) {
-		DataAccess db=new DataAccess();
-		User u= db.meterDinero(id, dinero);
-		db.close();
+		dbManager.open (false);
+		User u= dbManager.meterDinero(id, dinero);
+		dbManager.close();
 		return u;
 	}
    @WebMethod
    public Question createQuestion(Event event, String question, float betMinimum) throws EventFinished, QuestionAlreadyExist{
 	   
 	    //The minimum bed must be greater than 0
-	    DataAccess dBManager=new DataAccess();
+	    dbManager.open (false);
 		Question qry=null;
 		
 	    
@@ -70,9 +81,9 @@ public class BLFacadeImplementation  implements BLFacade {
 			throw new EventFinished(ResourceBundle.getBundle("Etiquetas").getString("ErrorEventHasFinished"));
 				
 		
-		 qry=dBManager.createQuestion(event,question,betMinimum);		
+		 qry=dbManager.createQuestion(event,question,betMinimum);		
 
-		dBManager.close();
+		dbManager.close();
 		
 		return qry;
    };
@@ -80,42 +91,42 @@ public class BLFacadeImplementation  implements BLFacade {
    public Question createQuestionQ(Question q){
 	   
 	    //The minimum bed must be greater than 0
-	    DataAccess dBManager=new DataAccess();	
-	    Question qt = dBManager.createQuestionQ(q);
-		dBManager.close();
+	    dbManager.open (false);	
+	    Question qt = dbManager.createQuestionQ(q);
+		dbManager.close();
 		return qt;
    };
   @WebMethod
    public void updateQuestion(Question q) {
-           DataAccess d=new DataAccess();
-           d.updateQuestion(q);
-           d.close();
+           dbManager.open (false);
+          dbManager.updateQuestion(q);
+          dbManager.close();
        }
    @WebMethod
    public boolean existeUsuario(String id) {
 	   boolean res;
-	   DataAccess d=new DataAccess(true);
-	   res=d.existeUsuario(id);
-	   d.close();
+	   DataAccess dbManager=new DataAccess(true);
+	   res=dbManager.existeUsuario(id);
+	  dbManager.close();
 	   return res;
    }
    @WebMethod
    public boolean existeAdmin(String id) {
 	   boolean res;
-	   DataAccess d=new DataAccess(true);
-	   res=d.existeAdmin(id);
-	   d.close();
+	   DataAccess dbManager=new DataAccess(true);
+	   res=dbManager.existeAdmin(id);
+	  dbManager.close();
 	   return res;
    }
    @WebMethod
    public void createEvent(Date date, String descrition){
 	   
 	    //The minimum bed must be greater than 0
-	    DataAccess dBManager=new DataAccess(true);
+	    DataAccess dbManager=new DataAccess(true);
 
-	    dBManager.createEvent(date,descrition);		
+	    dbManager.createEvent(date,descrition);		
 
-		dBManager.close();
+		dbManager.close();
 		
   };
 	
@@ -127,7 +138,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */
     @WebMethod	
 	public Vector<Event> getEvents(Date date)  {
-		DataAccess dbManager=new DataAccess();
+		dbManager.open (false);
 		Vector<Event>  events=dbManager.getEvents(date);
 		dbManager.close();
 		return events;
@@ -135,7 +146,7 @@ public class BLFacadeImplementation  implements BLFacade {
     
     @WebMethod	
 	public Vector<Event> getAllEvents()  {
-		DataAccess dbManager=new DataAccess();
+		dbManager.open (false);
 		Vector<Event>  events=dbManager.getAllEvents();
 		dbManager.close();
 		return events;
@@ -148,7 +159,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	 * @return collection of dates
 	 */
 	@WebMethod public Vector<Date> getEventsMonth(Date date) {
-		DataAccess dbManager=new DataAccess();
+		dbManager.open (false);
 		Vector<Date>  dates=dbManager.getEventsMonth(date);
 		dbManager.close();
 		return dates;
@@ -163,20 +174,20 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */	
     @WebMethod	
 	 public void initializeBD(){
-		DataAccess dBManager=new DataAccess();
-		dBManager.initializeDB();
-		dBManager.close();
+		dbManager.open (false);
+		dbManager.initializeDB();
+		dbManager.close();
 	}
 	@WebMethod public User getUserById(String id) {
-		DataAccess d= new DataAccess();
-		User u=d.getUserById(id);
-		d.close();
+		dbManager.open (false);
+		User u=dbManager.getUserById(id);
+		dbManager.close();
 		return u;
 	}
 	@WebMethod public Admin getAdminById(String id) {
-		DataAccess d= new DataAccess();
-		Admin u=d.getAdminById(id);
-		d.close();
+		dbManager.open (false);
+		Admin u=dbManager.getAdminById(id);
+		dbManager.close();
 		return u;
 	}
 	
@@ -189,44 +200,44 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */	
 	@WebMethod
 	public void registrarUsuario(String id,String contrasena) {
-    	DataAccess d=new DataAccess();
-    	d.registrarUsuario(id,contrasena);
+    	dbManager.open (false);
+    	dbManager.registrarUsuario(id,contrasena);
     	System.out.println("Registrado"+id);
-    	d.close();
+    	dbManager.close();
 	}
 	@WebMethod
 	public void registrarAdmin(String id,String contrasena) {
-    	DataAccess d=new DataAccess();
-    	d.registrarAdmin(id,contrasena);
+    	dbManager.open (false);
+    	dbManager.registrarAdmin(id,contrasena);
     	System.out.println("Registrado"+id);
-    	d.close();
+    	dbManager.close();
 	}
 
 	@WebMethod
 	public boolean compararContrasenasA(String id,String contrasena) {
-		DataAccess d=new DataAccess();
-		boolean res=d.correctPasswordA(id, contrasena);
-		d.close();
+		dbManager.open (false);
+		boolean res=dbManager.correctPasswordA(id, contrasena);
+		dbManager.close();
 		return res;
 	}
 	@WebMethod
 	public boolean compararContrasenasU(String id,String contrasena) {
-		DataAccess d=new DataAccess();
-		boolean res=d.correctPasswordU(id, contrasena);
-		d.close();
+		dbManager.open (false);
+		boolean res=dbManager.correctPasswordU(id, contrasena);
+		dbManager.close();
 		return res;
 	}
 	@WebMethod 
 	public User conseguirUser(User u) {
-		DataAccess d=new DataAccess();
-		User us=d.getUser(u);
-		d.close();
+		dbManager.open (false);
+		User us=dbManager.getUser(u);
+		dbManager.close();
 		return us;
 	}
 	public Apuesta crearApuesta(User u, Question q, int p, float c, Event e){
-		DataAccess d =new DataAccess();
-		Apuesta ap = d.crearApuesta(u, q, p, c, e);
-		d.close();
+		dbManager.open (false);
+		Apuesta ap =dbManager.crearApuesta(u, q, p, c, e);
+		dbManager.close();
 		return ap;
 	}
 	public void subirResultado (Event e, Question q, int np) {
@@ -234,38 +245,38 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 	@WebMethod
 	public ApuestaCombinada meterApuestaCombinada (User u, ArrayList <Apuesta> listaApTemp) {
-		DataAccess d = new DataAccess();
-		ApuestaCombinada ac= d.meterApuestaCombinada (u, listaApTemp);		
-		d.close();
+		dbManager.open (false);
+		ApuestaCombinada ac=dbManager.meterApuestaCombinada (u, listaApTemp);		
+		dbManager.close();
 		return ac;
 	}
 	@WebMethod
 	public Quiniela meterQuiniela (ArrayList <Event> listaeventos) {
-		DataAccess d = new DataAccess();
-		Quiniela ac= d.meterQuiniela (listaeventos);		
-		d.close();
+		dbManager.open (false);
+		Quiniela ac=dbManager.meterQuiniela (listaeventos);		
+		dbManager.close();
 		return ac;
 	}
 	@WebMethod
 	public List<Quiniela> sacarQuinielas () {
-		DataAccess d = new DataAccess();
-		List<Quiniela> q= d.sacarQuinielas();		
-		d.close();
+		dbManager.open (false);
+		List<Quiniela> q=dbManager.sacarQuinielas();		
+		dbManager.close();
 		return q;
 	}
 	@WebMethod
 	public void guardarQuiniela(User u, Quiniela q, int[] res) {
-		DataAccess d=new DataAccess();
-		d.guardarQuiniela(u, q, res);
+		dbManager.open (false);
+		dbManager.guardarQuiniela(u, q, res);
 		
-		d.close();
+		dbManager.close();
 		
 	}
 	@WebMethod
 	 public void subirResultadoQuiniela(Quiniela quinielaActual,int []resultadoQuiniela) {
-		DataAccess d=new DataAccess();
-		d.subirResultadoQuiniela(quinielaActual,resultadoQuiniela);
-		d.close();
+		dbManager.open (false);
+		dbManager.subirResultadoQuiniela(quinielaActual,resultadoQuiniela);
+		dbManager.close();
 	}
 }
 
