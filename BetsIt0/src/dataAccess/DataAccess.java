@@ -419,7 +419,7 @@ public class DataAccess  {
 			}
 		}
 		ev.setQuestions(v);
-		db.getTransaction().commit();
+		db.getTransaction().commit(); 
 	}
 	public Apuesta crearApuesta(User u, Question q, int p, float c, Event e) {
 		int id_a = Integer.parseInt(DataAccess.c.getApostarId());
