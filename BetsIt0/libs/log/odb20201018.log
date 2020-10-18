@@ -914,3 +914,506 @@ Type domain.Apuesta is not enhanced.
 [2020-10-18 18:42:15 #8 type] 
 Type domain.ApuestaCombinada is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:38:03 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 15532@DESKTOP-0IN7Q98
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:38:33 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 12740@DESKTOP-0IN7Q98
+
+[2020-10-18 21:38:33 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 21:38:33 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:38:33 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 21:38:33 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 21:38:33 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:38:33 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 21:38:33 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 21:38:33 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:38:33 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 21:38:33 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 21:38:33 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:38:33 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 21:38:33 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 21:38:33 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 21:38:33 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:38:33 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 21:38:33 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 21:38:33 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:40:31 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' has been recovered (tr. 1-56)
+
+[2020-10-18 21:40:31 #2 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 15872@DESKTOP-0IN7Q98
+
+[2020-10-18 21:40:31 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:40:31 #4 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:40:31 #5 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:40:31 #6 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:40:31 #7 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:40:31 #8 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:40:48 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 5740@DESKTOP-0IN7Q98
+
+[2020-10-18 21:40:48 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 21:40:48 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:40:48 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 21:40:48 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 21:40:48 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:40:48 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 21:40:48 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 21:40:48 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:40:48 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 21:40:48 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 21:40:48 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:40:48 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 21:40:48 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 21:40:48 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 21:40:48 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:40:49 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 21:40:49 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 21:40:49 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:41:18 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 9340@DESKTOP-0IN7Q98
+
+[2020-10-18 21:41:19 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 21:41:19 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:41:19 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 21:41:19 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 21:41:19 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:41:19 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 21:41:19 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 21:41:19 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:41:19 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 21:41:19 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 21:41:19 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:41:19 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 21:41:19 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 21:41:19 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 21:41:19 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:41:19 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 21:41:19 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 21:41:19 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:41:59 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 14692@DESKTOP-0IN7Q98
+
+[2020-10-18 21:41:59 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 21:41:59 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:41:59 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 21:41:59 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 21:41:59 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:41:59 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 21:41:59 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 21:41:59 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:41:59 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 21:41:59 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 21:41:59 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:41:59 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 21:41:59 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 21:41:59 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 21:41:59 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:41:59 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 21:41:59 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 21:41:59 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 21:44:27 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 10668@DESKTOP-0IN7Q98
+
+[2020-10-18 21:44:27 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 21:44:27 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 21:44:27 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 21:44:27 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 21:44:27 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 21:44:27 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 21:44:27 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 21:44:27 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 21:44:27 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 21:44:27 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 21:44:27 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 21:44:27 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 21:44:27 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 21:44:27 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 21:44:27 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 21:44:27 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 21:44:27 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 21:44:27 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 22:08:21 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 15844@DESKTOP-0IN7Q98
+
+[2020-10-18 22:08:21 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 22:08:21 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 22:08:21 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 22:08:21 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 22:08:21 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 22:08:21 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 22:08:21 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 22:08:21 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 22:08:21 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 22:08:21 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 22:08:21 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 22:08:21 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 22:08:21 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 22:08:21 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 22:08:21 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 22:08:21 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 22:08:21 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 22:08:21 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 22:09:44 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 13296@DESKTOP-0IN7Q98
+
+[2020-10-18 22:09:44 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 22:09:44 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 22:09:44 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 22:09:44 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 22:09:44 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 22:09:44 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 22:09:44 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 22:09:44 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 22:09:44 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 22:09:44 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 22:09:44 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 22:09:44 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 22:09:44 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 22:09:44 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 22:09:44 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 22:09:44 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 22:09:44 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 22:09:44 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-18 22:14:36 #1 store] 
+Database 'C:\Users\kofid\git\Bets_IS2\BetsIt0\resources\bets.temp' is opened by 1640@DESKTOP-0IN7Q98
+
+[2020-10-18 22:14:36 #2 type.registry] 
+New type domain.Event
+
+[2020-10-18 22:14:36 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-18 22:14:36 #4 type.registry] 
+New type domain.Question
+
+[2020-10-18 22:14:36 #5 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-10-18 22:14:36 #6 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-18 22:14:36 #7 type.registry] 
+New type domain.Pronostico
+
+[2020-10-18 22:14:36 #8 type.registry] 
+New type java.util.ArrayList<domain.Pronostico>
+
+[2020-10-18 22:14:36 #9 type] 
+Type domain.Pronostico is not enhanced.
+
+[2020-10-18 22:14:36 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-10-18 22:14:36 #11 type.registry] 
+New type domain.User
+
+[2020-10-18 22:14:36 #12 type] 
+Type domain.User is not enhanced.
+
+[2020-10-18 22:14:36 #13 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-10-18 22:14:36 #14 type.registry] 
+New type java.util.ArrayList<java.lang.String>
+
+[2020-10-18 22:14:36 #15 type.registry] 
+New type domain.Apuesta
+
+[2020-10-18 22:14:36 #16 type] 
+Type domain.Apuesta is not enhanced.
+
+[2020-10-18 22:14:36 #17 type.registry] 
+New type domain.ApuestaCombinada
+
+[2020-10-18 22:14:36 #18 type] 
+Type domain.ApuestaCombinada is not enhanced.
+
+[2020-10-18 22:14:36 #19 type.registry] 
+New type java.util.ArrayList<domain.Apuesta>
+

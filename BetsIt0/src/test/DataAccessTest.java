@@ -308,10 +308,10 @@ class DataAccessTest {
 
 		Date oneDate = new Date(2020, 12, 31);
 		ev = testBL.addEvent(queryText, oneDate);
-		Question q = new Question((Integer) 1, "Primera pregunta", (float) 20, ev);
-		Question q2 = new Question((Integer) 1, "Segunda pregunta", (float) 20, ev);
-		Question q3 = new Question((Integer) 1, "Tercera pregunta", (float) 20, ev);
-		Vector<Question> qVec = new Vector();
+		Question q = new Question(123, "Primera pregunta", (float) 20, ev);
+		Question q2 = new Question(124, "Segunda pregunta", (float) 20, ev);
+		Question q3 = new Question(125, "Tercera pregunta", (float) 20, ev);
+		Vector<Question> qVec = new Vector<Question>();
 		qVec.add(q);
 		qVec.add(q2);
 		qVec.add(q3);
@@ -333,4 +333,26 @@ class DataAccessTest {
 			}
 		}
 	}
+	
+	@Test
+	@DisplayName(" Upload combined test ")
+	void meterApuestaCombinadaTest1() {
+		User u = new User("Alex", "69285");
+		ArrayList<Apuesta> apuestas = new ArrayList<Apuesta>();
+		
+		try {
+			Event futbol = new Event(692, "Madrid vs Barcelona", sdf.parse("05/10/2022"));
+			Question q = new Question("+1,5 goles?", (float)2.1, futbol);
+			Apuesta apuesta1 = new Apuesta(321, u, q, 1 , 5, futbol);
+			apuestas.add(apuesta1);
+			ApuestaCombinada esperado = new ApuestaCombinada(321, apuestas, u); 
+			ApuestaCombinada obtenido = sut.meterApuestaCombinada(u, apuestas);
+			assertEquals(esperado.getUsuario(), obtenido.getUsuario());
+			assertEquals(esperado.getId(), obtenido.getId());
+			assertEquals(esperado.getListaApuesta(), obtenido.getListaApuesta());
+		} catch (Exception e) {
+			fail("Fallo de en test");
+		}
+	
+	}	
 }
